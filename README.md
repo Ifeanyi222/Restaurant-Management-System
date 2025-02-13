@@ -10,6 +10,6 @@ Reservation System: Allow customers to book tables in advance with automated con
 Reporting & Analytics: Generate sales reports, track popular menu items, and analyze restaurant performance.
 Tech Stack:
 Backend: Django (Python)
-Database: PostgreSQL/MySQL
+Database: MySQL
 Authentication: Django Auth with role-based access for staff and managers
-API: Django REST Framework (for integration with frontend or mobile apps)
+API: Django REST Framework 
