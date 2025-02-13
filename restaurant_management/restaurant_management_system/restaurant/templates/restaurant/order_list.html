@@ -1,0 +1,25 @@
+{% extends 'restaurant/base.html' %}
+{% block content %}
+<h2>Orders</h2>
+<a href="/orders/add/" class="btn btn-primary">Add Order</a>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Table</th>
+            <th>Status</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.customer_name }}</td>
+            <td>{{ order.table.table_number }}</td>
+            <td>{{ order.status }}</td>
+            <td>{{ order.total_price }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

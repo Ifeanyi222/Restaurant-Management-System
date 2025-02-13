@@ -1,0 +1,21 @@
+{% extends 'restaurant/base.html' %}
+{% block content %}
+<h2>User Profiles</h2>
+<a href="/profiles/add/" class="btn btn-primary">Add User Profile</a>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for profile in profiles %}
+        <tr>
+            <td>{{ profile.user.username }}</td>
+            <td>{{ profile.role }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

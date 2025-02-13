@@ -1,0 +1,27 @@
+{% extends 'restaurant/base.html' %}
+{% block content %}
+<h2>Reservations</h2>
+<a href="/reservations/add/" class="btn btn-primary">Add Reservation</a>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Phone</th>
+            <th>Table</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for reservation in reservations %}
+        <tr>
+            <td>{{ reservation.customer_name }}</td>
+            <td>{{ reservation.customer_phone }}</td>
+            <td>{{ reservation.table.table_number }}</td>
+            <td>{{ reservation.reservation_time }}</td>
+            <td>{{ reservation.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

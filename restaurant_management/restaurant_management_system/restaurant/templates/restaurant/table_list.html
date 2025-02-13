@@ -1,0 +1,23 @@
+{% extends 'restaurant/base.html' %}
+{% block content %}
+<h2>Table List</h2>
+<a href="/tables/add/" class="btn btn-primary">Add Table</a>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Table Number</th>
+            <th>Seats</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for table in tables %}
+        <tr>
+            <td>{{ table.table_number }}</td>
+            <td>{{ table.seats }}</td>
+            <td>{{ table.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
